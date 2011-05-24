@@ -1,0 +1,14 @@
+#!/bin/bash
+
+domain="$1"
+for host in A B  ; do
+  echo  mc-filemgr  -I ${host} -f /var/lib/puppet/ssl/certificate_requests/${host}${domain}.pem remove
+  echo mc-filemgr  -I ${host} -f /var/lib/puppet/ssl/public_keys/${host}${domain}.pem remove
+  echo mc-filemgr  -I ${host} -f /var/lib/puppet/ssl/private_keys/${host}${domain}.pem remove
+  echo mc-filemgr  -I ${host} -f /var/lib/puppet/ssl/certs/${host}${domain}.pem remove
+done
+
+echo mc-service puppet restart
+
+	
+
