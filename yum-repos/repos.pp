@@ -83,6 +83,17 @@ class repos {
 
         
 	
+	"gleich":
+		descr => "Glei.ch Ruby pacakges",
+		baseurl => "http://yum.glei.ch/el5/",
+            	enabled => 1,
+            	gpgcheck => 0;
+
+	"bravenet":
+		descr => "BraveNet",
+		baseurl => "http://download.elff.bravenet.com/5/",
+            	enabled => 1,
+            	gpgcheck => 0;
  }
 }
 
