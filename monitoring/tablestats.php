@@ -1,5 +1,9 @@
 <?php
 
+# All initial bugs produced by Kris Buytaert (Kris.Buytaert@inuits.eu) 
+# Small php script to grab some relevant  (rowcount etc) metrics from a MySQL table and send it to Graphite 
+# GPL etc ...  please send patches when you improve this .. 
+
 # TODO externalize config,   load mysql config from a config file 
 # TODO make schema and tables to graph / monitor configurable , currently grabbing everythin :(
 
