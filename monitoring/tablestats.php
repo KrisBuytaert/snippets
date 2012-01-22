@@ -1,9 +1,5 @@
 <?php
 
-# All initial bugs produced by Kris Buytaert (Kris.Buytaert@inuits.eu) 
-# Small php script to grab some relevant  (rowcount etc) metrics from a MySQL table and send it to Graphite 
-# GPL etc ...  please send patches when you improve this .. 
-
 # TODO externalize config,   load mysql config from a config file 
 # TODO make schema and tables to graph / monitor configurable , currently grabbing everythin :(
 
@@ -41,15 +37,15 @@ $mysql_port = 3306;
     # Set Time 
     $timestamp = time();
     $sql = "SHOW TABLES FROM $dbname";
-    $result = @mysql_query($sql, $conn);
-    while ( $row = @mysql_fetch_array($result) ) {
+    $result = mysql_query($sql, $conn);
+    while ( $row = mysql_fetch_array($result) ) {
         # print "$row[0] \n ";
         $detailsql = "
             select TABLE_ROWS, AVG_ROW_LENGTH,  DATA_LENGTH, MAX_DATA_LENGTH, INDEX_LENGTH  
             from information_schema.tables
             where table_name='$row[0]'";
-        $detail = @mysql_query ($detailsql,$conn);
-        while ( $drow = @mysql_fetch_array($detail)) {
+        $detail = mysql_query ($detailsql,$conn);
+        while ( $drow = mysql_fetch_array($detail)) {
             print "$basename.$row[0]-nrrows      $drow[0]  $timestamp \n"; 
             print "$basename.$row[0]-avglength   $drow[1]  $timestamp \n";
             print "$basename.$row[0]-datalength  $drow[2]  $timestamp \n";
