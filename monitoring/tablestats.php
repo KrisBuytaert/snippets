@@ -7,11 +7,11 @@ $basename = 'mss.myss';
 
 # This in case u don't wanna give arguments... these are defaults 
 
-$mysql_user = 'kinkygirl';
-$mysql_pass = 'kinkygirl';
+$mysql_user = 'mysqluser';
+$mysql_pass = 'mysqlpass';
 $mysql_port = 3306;
 $mysql_ssl  = FALSE;   # Whether to use SSL to connect to MySQL.
-$mysql_db = 'pornset';
+$mysql_db = 'default';
 
 
 $debug     = FALSE; # Define whether you want debugging behavior.
