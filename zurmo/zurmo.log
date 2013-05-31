@@ -1,0 +1,778 @@
+/usr/sbin/mysqld, Version: 5.1.63-rel13.4-log (Percona Server (GPL), 13.4, Revision 443). started with:
+Tcp port: 3306  Unix socket: /var/lib/mysql/mysql.sock
+Time                 Id Command    Argument
+130322 22:11:37	20523 Connect	zurmo@localhost on inuits_zurmo
+		20523 Query	SET NAMES 'utf8'
+		20524 Connect	zurmo@localhost on inuits_zurmo
+		20524 Query	SET NAMES utf8
+		20524 Query	SELECT * FROM `globalmetadata` WHERE className = 'ZurmoModule'
+		20524 Query	SELECT * FROM `_user` WHERE username = 'krisbuytaert'
+		20524 Query	SELECT * FROM `globalmetadata` WHERE className = 'User'
+		20524 Query	SELECT * FROM `globalmetadata` WHERE className = 'Person'
+		20524 Query	SELECT * FROM `permitable` WHERE ( `id`  IN ( '11')  )
+		20524 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '223')  )
+		20524 Query	SELECT * FROM `person` WHERE ( `id`  IN ( '24')  )
+		20524 Query	SELECT * FROM `customfield` WHERE ( `id`  IN ( '91')  )
+		20524 Query	SELECT * FROM `basecustomfield` WHERE ( `id`  IN ( '91')  )
+		20524 Query	SELECT * FROM `customfielddata` WHERE name = 'Titles'
+		20524 Query	SELECT * FROM `customfielddata` WHERE ( `id`  IN ( '7')  )
+		20524 Query	SELECT * FROM `perusermetadata` WHERE className = 'UsersModule' and _user_id = 8
+		20524 Query	SELECT * FROM `globalmetadata` WHERE className = 'UsersModule'
+		20524 Query	SELECT * FROM `globalmetadata` WHERE className = 'Account'
+		20524 Query	SELECT * FROM `customfielddata` WHERE name = 'Industries'
+		20524 Query	SELECT * FROM `customfielddata` WHERE name = 'AccountTypes'
+		20524 Query	SELECT * FROM `globalmetadata` WHERE className = 'Contact'
+		20524 Query	SELECT * FROM `customfielddata` WHERE name = 'LeadSources'
+		20524 Query	SELECT * FROM `globalmetadata` WHERE className = 'Opportunity'
+		20524 Query	SELECT * FROM `customfielddata` WHERE name = 'SalesStages'
+		20524 Query	SELECT * FROM `globalmetadata` WHERE className = 'Conversation'
+		20524 Query	SELECT * FROM `globalmetadata` WHERE className = 'Meeting'
+		20524 Query	SELECT * FROM `customfielddata` WHERE name = 'MeetingCategories'
+		20524 Query	SELECT * FROM `globalmetadata` WHERE className = 'Mission'
+		20524 Query	SELECT * FROM `globalmetadata` WHERE className = 'Note'
+		20524 Query	SELECT * FROM `globalmetadata` WHERE className = 'Task'
+		20524 Query	SELECT * FROM `globalmetadata` WHERE className = 'Currency'
+		20524 Query	select get_user_actual_right(8, 'ContactsModule', 'Access Contacts Tab')
+		20524 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20524 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20524 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20524 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'ContactsModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Access Contacts Tab' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20524 Query	SELECT * FROM `globalmetadata` WHERE className = 'ContactsModule'
+		20524 Query	SELECT * FROM `contact` WHERE id = '192'
+		20524 Query	SELECT * FROM `person` WHERE ( `id`  IN ( '201')  )
+		20524 Query	SELECT * FROM `ownedsecurableitem` WHERE ( `id`  IN ( '408')  )
+		20524 Query	SELECT * FROM `securableitem` WHERE ( `id`  IN ( '409')  )
+		20524 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '567')  )
+		20524 Query	SELECT * FROM `customfield` WHERE ( `id`  IN ( '667')  )
+		20524 Query	SELECT * FROM `basecustomfield` WHERE ( `id`  IN ( '667')  )
+		20524 Query	SELECT * FROM `customfield` WHERE ( `id`  IN ( '668')  )
+		20524 Query	SELECT * FROM `basecustomfield` WHERE ( `id`  IN ( '668')  )
+		20524 Query	SELECT * FROM `customfielddata` WHERE ( `id`  IN ( '4')  )
+130322 22:11:38	20524 Query	select `calculatedderivedattributemetadata`.`id` id from (`calculatedderivedattributemetadata`, `derivedattributemetadata`) where derivedattributemetadata.name = 'explicitReadWriteModelPermissions' and derivedattributemetadata.modelclassname = 'Contact' and `derivedattributemetadata`.`id` = `calculatedderivedattributemetadata`.`derivedattributemetadata_id`
+		20524 Query	select `dropdowndependencyderivedattributemetadata`.`id` id from (`dropdowndependencyderivedattributemetadata`, `derivedattributemetadata`) where derivedattributemetadata.name = 'explicitReadWriteModelPermissions' and derivedattributemetadata.modelclassname = 'Contact' and `derivedattributemetadata`.`id` = `dropdowndependencyderivedattributemetadata`.`derivedattributemetadata_id`
+		20524 Query	SELECT * FROM `_group` WHERE name = 'Everyone'
+		20524 Query	SELECT * FROM `permitable` WHERE ( `id`  IN ( '5')  )
+		20524 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '35')  )
+		20524 Query	select id from permission where securableitem_id = 409
+		20524 Query	SELECT * FROM `contactstate` WHERE id = '7'
+		20524 Query	SELECT * FROM `contactstate` WHERE ( `id`  IN ( '7')  )
+		20524 Query	SELECT * FROM `email` WHERE ( `id`  IN ( '389')  )
+		20524 Query	SELECT * FROM `email` WHERE ( `id`  IN ( '390')  )
+		20524 Query	SELECT * FROM `address` WHERE ( `id`  IN ( '617')  )
+		20524 Query	SELECT * FROM `globalmetadata` WHERE className = 'Address'
+		20524 Query	SELECT * FROM `address` WHERE ( `id`  IN ( '618')  )
+		20524 Query	select id from _user where username = 'krisbuytaert'
+		20524 Query	select id from _user where username = 'krisbuytaert'
+		20524 Query	SELECT * FROM `_user` WHERE id = '8'
+		20524 Query	select id from _user where username = 'krisbuytaert'
+		20524 Query	select id from _user where username = 'krisbuytaert'
+		20524 Query	UPDATE `item` SET  `createddatetime` = '2013-03-22 21:06:56' , `modifieddatetime` = '2013-03-22 21:11:38' , `customfieldsmodel_id` = NULL , `createdbyuser__user_id` = '8' , `modifiedbyuser__user_id` = '8'  WHERE id = 567
+		20524 Query	UPDATE `securableitem` SET  `item_id` = '567'  WHERE id = 409
+		20524 Query	UPDATE `ownedsecurableitem` SET  `securableitem_id` = '409' , `owner__user_id` = '8'  WHERE id = 408
+130322 22:11:39	20524 Query	UPDATE `person` SET  `department` = 'Mortgages' , `firstname` = 'Ingrid' , `jobtitle` = 'Team Lead' , `lastname` = 'Algra' , `mobilephone` = '' , `officephone` = '' , `officefax` = '' , `title_customfield_id` = '667' , `ownedsecurableitem_id` = '408' , `primaryaddress_address_id` = '617' , `primaryemail_email_id` = '389'  WHERE id = 201
+		20524 Query	UPDATE `contact` SET  `person_id` = '201' , `industry_customfield_id` = NULL , `source_customfield_id` = '668' , `account_id` = NULL , `companyname` = NULL , `description` = '' , `website` = NULL , `secondaryaddress_address_id` = '618' , `secondaryemail_email_id` = '390' , `state_contactstate_id` = '7'  WHERE id = 192
+130322 22:11:40	20524 Query	select `contactstate`.`id` id from `contactstate`  order by `order`
+		20524 Query	SELECT * FROM `contactstate` WHERE ( `id`  IN ( '2','3','4','5','6','7')  )
+		20524 Query	select `contactstate`.`id` id from `contactstate`  order by `order`
+		20524 Query	SELECT * FROM `contactstate` WHERE ( `id`  IN ( '2','3','4','5','6','7')  )
+		20524 Query	select `gamescore`.`id` id from `gamescore` where (`gamescore`.`type` = 'UpdateContact') and (`gamescore`.`person_item_id` = 223)
+		20524 Query	SELECT * FROM `gamescore` WHERE ( `id`  IN ( '56')  )
+		20524 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '578')  )
+		20524 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '223')  )
+		20524 Query	UPDATE `item` SET  `createddatetime` = '2013-03-22 21:08:32' , `modifieddatetime` = '2013-03-22 21:11:40' , `customfieldsmodel_id` = NULL , `createdbyuser__user_id` = '8' , `modifiedbyuser__user_id` = '8'  WHERE id = 578
+130322 22:11:41	20524 Query	UPDATE `gamescore` SET  `item_id` = '578' , `person_item_id` = '223' , `type` = 'UpdateContact' , `value` = 9  WHERE id = 56
+130322 22:11:42	20524 Query	call clear_cache_securableitem_actual_permissions(409)
+		20524 Query	insert into contact_read
+                                 (securableitem_id, munge_id, count)
+                     values (409, 'G3', 1)
+                     on duplicate key
+                     update count = count + 1
+		20524 Query	SELECT * FROM `_group__user` WHERE ( `_group_id`  IN ( '3')  )
+		20524 Query	select id from _user where username = 'krisbuytaert'
+		20524 Query	select id from _user where username = 'krisbuytaert'
+		20524 Query	select id from _group where name = 'Everyone'
+		20524 Query	select id from _group where name = 'Everyone'
+		20524 Query	INSERT INTO `permission` ( id, `permissions`,`type`,`permitable_id` ) VALUES
+      ( NULL,  27 , 1 , '5'  )
+130322 22:11:43	20524 Query	UPDATE `permission` SET  `permissions` = 27 , `type` = 1 , `permitable_id` = '5' , `securableitem_id` = '409'  WHERE id = 109
+		20524 Query	UPDATE `item` SET  `createddatetime` = '2013-03-22 21:06:56' , `modifieddatetime` = '2013-03-22 21:11:38' , `customfieldsmodel_id` = NULL , `createdbyuser__user_id` = '8' , `modifiedbyuser__user_id` = '8'  WHERE id = 567
+130322 22:11:44	20524 Query	UPDATE `securableitem` SET  `item_id` = '567'  WHERE id = 409
+130322 22:11:45	20524 Query	UPDATE `ownedsecurableitem` SET  `securableitem_id` = '409' , `owner__user_id` = '8'  WHERE id = 408
+130322 22:11:46	20524 Query	UPDATE `person` SET  `department` = 'Mortgages' , `firstname` = 'Ingrid' , `jobtitle` = 'Team Lead' , `lastname` = 'Algra' , `mobilephone` = '' , `officephone` = '' , `officefax` = '' , `title_customfield_id` = '667' , `ownedsecurableitem_id` = '408' , `primaryaddress_address_id` = '617' , `primaryemail_email_id` = '389'  WHERE id = 201
+		20524 Query	UPDATE `contact` SET  `person_id` = '201' , `industry_customfield_id` = NULL , `source_customfield_id` = '668' , `account_id` = NULL , `companyname` = NULL , `description` = '' , `website` = NULL , `secondaryaddress_address_id` = '618' , `secondaryemail_email_id` = '390' , `state_contactstate_id` = '7'  WHERE id = 192
+130322 22:11:47	20524 Query	select `contactstate`.`id` id from `contactstate`  order by `order`
+		20524 Query	SELECT * FROM `contactstate` WHERE ( `id`  IN ( '2','3','4','5','6','7')  )
+		20524 Query	select `contactstate`.`id` id from `contactstate`  order by `order`
+		20524 Query	SELECT * FROM `contactstate` WHERE ( `id`  IN ( '2','3','4','5','6','7')  )
+		20524 Query	select `gamescore`.`id` id from `gamescore` where (`gamescore`.`type` = 'UpdateContact') and (`gamescore`.`person_item_id` = 223)
+		20524 Query	SELECT * FROM `gamescore` WHERE ( `id`  IN ( '56')  )
+		20524 Query	UPDATE `item` SET  `createddatetime` = '2013-03-22 21:08:32' , `modifieddatetime` = '2013-03-22 21:11:47' , `customfieldsmodel_id` = NULL , `createdbyuser__user_id` = '8' , `modifiedbyuser__user_id` = '8'  WHERE id = 578
+130322 22:11:48	20524 Query	UPDATE `gamescore` SET  `item_id` = '578' , `person_item_id` = '223' , `type` = 'UpdateContact' , `value` = 10  WHERE id = 56
+130322 22:11:50	20524 Query	SELECT * FROM `_user` WHERE id = '8'
+		20524 Query	select `gamepoint`.`id` id from `gamepoint` where (`gamepoint`.`type` = 'AccountManagement') and (`gamepoint`.`person_item_id` = 223)
+		20524 Query	SELECT * FROM `gamepoint` WHERE ( `id`  IN ( '26')  )
+		20524 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '569')  )
+		20524 Query	select id from gamepointtransaction where gamepoint_id = 26
+		20524 Query	SELECT * FROM `gamepointtransaction` WHERE ( `id`  IN ( '701','707','708','709','710')  )
+		20524 Query	INSERT INTO `gamepointtransaction` ( id, `value`,`createddatetime` ) VALUES
+      ( NULL,  20 , '2013-03-22 21:11:50'  )
+130322 22:11:51	20524 Query	UPDATE `gamepointtransaction` SET  `value` = 20 , `createddatetime` = '2013-03-22 21:11:50' , `gamepoint_id` = '26'  WHERE id = 711
+		20524 Query	UPDATE `gamepoint` SET  `item_id` = '569' , `type` = 'AccountManagement' , `value` = 110 , `person_item_id` = '223'  WHERE id = 26
+130322 22:11:52	20524 Query	select `gamebadge`.`id` id from `gamebadge` where (`gamebadge`.`person_item_id` = 223)
+		20524 Query	SELECT * FROM `gamebadge` WHERE ( `id`  IN ( '31','40','41','42')  )
+		20524 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '226')  )
+		20524 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '566')  )
+		20524 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '570')  )
+		20524 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '575')  )
+		20524 Query	select `gamepoint`.`id` id from `gamepoint` where (`gamepoint`.`person_item_id` = 223)
+		20524 Query	SELECT * FROM `gamepoint` WHERE ( `id`  IN ( '22','26','27')  )
+		20524 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '225')  )
+		20524 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '574')  )
+		20524 Query	select `gamescore`.`id` id from `gamescore` where (`gamescore`.`person_item_id` = 223)
+		20524 Query	SELECT * FROM `gamescore` WHERE ( `id`  IN ( '41','53','54','55','56')  )
+		20524 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '224')  )
+		20524 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '565')  )
+		20524 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '568')  )
+		20524 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '573')  )
+		20524 Query	select type, sum(value) sum from gamepoint where person_item_id = 223 group by type
+		20524 Query	select `gamelevel`.`id` id from `gamelevel` where (`gamelevel`.`person_item_id` = 223)
+		20524 Query	SELECT * FROM `gamelevel` WHERE ( `id`  IN ( '15')  )
+		20524 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '571')  )
+		20524 Query	select id from _user where username = 'krisbuytaert'
+		20524 Query	select id from _user where username = 'krisbuytaert'
+		20524 Query	INSERT INTO `item` ( id, `modifieddatetime`,`createddatetime` ) VALUES
+      ( NULL,  '2013-03-22 21:11:52' , '2013-03-22 21:11:52'  )
+		20524 Query	UPDATE `item` SET  `modifieddatetime` = '2013-03-22 21:11:52' , `createddatetime` = '2013-03-22 21:11:52' , `modifiedbyuser__user_id` = '8' , `createdbyuser__user_id` = '8'  WHERE id = 579
+130322 22:11:53	20524 Query	INSERT INTO `gamelevel` ( id, `value`,`type`,`item_id`,`person_item_id` ) VALUES
+      ( NULL,  1 , 'AccountManagement' , 579 , '223'  )
+		20524 Query	insert into auditevent (datetime,
+                                                modulename,
+                                                eventname,
+                                                _user_id,
+                                                modelclassname,
+                                                modelid,
+                                                serializeddata)
+                        values ('2013-03-22 21:11:53',
+                                'ZurmoModule',
+                                'Item Created',
+                                8, 'GameLevel', 16, 's:17:\"AccountManagement\";')
+130322 22:11:54	20524 Query	select `gamepoint`.`id` id from `gamepoint` where (`gamepoint`.`type` = 'UserAdoption') and (`gamepoint`.`person_item_id` = 223)
+		20524 Query	SELECT * FROM `gamepoint` WHERE ( `id`  IN ( '22')  )
+		20524 Query	select id from gamepointtransaction where gamepoint_id = 22
+		20524 Query	SELECT * FROM `gamepointtransaction` WHERE ( `id`  IN ( '168','169','693','694','695','696','697','698','699','700','702','704')  )
+		20524 Query	INSERT INTO `gamepointtransaction` ( id, `value`,`createddatetime` ) VALUES
+      ( NULL,  100 , '2013-03-22 21:11:54'  )
+		20524 Query	UPDATE `gamepointtransaction` SET  `value` = 100 , `createddatetime` = '2013-03-22 21:11:54' , `gamepoint_id` = '22'  WHERE id = 712
+130322 22:11:55	20524 Query	UPDATE `gamepoint` SET  `item_id` = '225' , `type` = 'UserAdoption' , `value` = 350 , `person_item_id` = '223'  WHERE id = 22
+		20523 Quit	
+		20524 Quit	
+		20525 Connect	zurmo@localhost on inuits_zurmo
+		20525 Query	SET NAMES 'utf8'
+		20526 Connect	zurmo@localhost on inuits_zurmo
+		20526 Query	SET NAMES utf8
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'ZurmoModule'
+		20526 Query	SELECT * FROM `_user` WHERE username = 'krisbuytaert'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'User'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'Person'
+		20526 Query	SELECT * FROM `permitable` WHERE ( `id`  IN ( '11')  )
+		20526 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '223')  )
+		20526 Query	SELECT * FROM `person` WHERE ( `id`  IN ( '24')  )
+		20526 Query	SELECT * FROM `customfield` WHERE ( `id`  IN ( '91')  )
+		20526 Query	SELECT * FROM `basecustomfield` WHERE ( `id`  IN ( '91')  )
+		20526 Query	SELECT * FROM `customfielddata` WHERE name = 'Titles'
+		20526 Query	SELECT * FROM `customfielddata` WHERE ( `id`  IN ( '7')  )
+		20526 Query	SELECT * FROM `perusermetadata` WHERE className = 'UsersModule' and _user_id = 8
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'UsersModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'Account'
+		20526 Query	SELECT * FROM `customfielddata` WHERE name = 'Industries'
+		20526 Query	SELECT * FROM `customfielddata` WHERE name = 'AccountTypes'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'Contact'
+		20526 Query	SELECT * FROM `customfielddata` WHERE name = 'LeadSources'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'Opportunity'
+		20526 Query	SELECT * FROM `customfielddata` WHERE name = 'SalesStages'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'Conversation'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'Meeting'
+		20526 Query	SELECT * FROM `customfielddata` WHERE name = 'MeetingCategories'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'Mission'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'Note'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'Task'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'Currency'
+		20526 Query	select get_user_actual_right(8, 'ContactsModule', 'Access Contacts Tab')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'ContactsModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Access Contacts Tab' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	SELECT * FROM `contact` WHERE id = '192'
+		20526 Query	SELECT * FROM `person` WHERE ( `id`  IN ( '201')  )
+		20526 Query	SELECT * FROM `ownedsecurableitem` WHERE ( `id`  IN ( '408')  )
+		20526 Query	SELECT * FROM `securableitem` WHERE ( `id`  IN ( '409')  )
+		20526 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '567')  )
+		20526 Query	SELECT * FROM `customfield` WHERE ( `id`  IN ( '667')  )
+		20526 Query	SELECT * FROM `basecustomfield` WHERE ( `id`  IN ( '667')  )
+		20526 Query	SELECT * FROM `customfield` WHERE ( `id`  IN ( '668')  )
+		20526 Query	SELECT * FROM `basecustomfield` WHERE ( `id`  IN ( '668')  )
+		20526 Query	SELECT * FROM `customfielddata` WHERE ( `id`  IN ( '4')  )
+		20526 Query	insert into auditevent (datetime,
+                                                modulename,
+                                                eventname,
+                                                _user_id,
+                                                modelclassname,
+                                                modelid,
+                                                serializeddata)
+                        values ('2013-03-22 21:11:55',
+                                'ZurmoModule',
+                                'Item Viewed',
+                                8, 'Contact', 192, 'a:2:{i:0;s:12:\"Ingrid Algra\";i:1;s:14:\"ContactsModule\";}')
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'ContactsModule'
+		20526 Query	select get_user_actual_right(8, 'AccountsModule', 'Access Accounts Tab')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'AccountsModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Access Accounts Tab' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'AccountsModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'ActivitiesModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'ApiModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'CommentsModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'ConfigurationModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'ConversationsModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'DesignerModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'EmailMessagesModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'ExportModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'GamificationModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'HomeModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'ImportModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'InstallModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'JobsManagerModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'LeadsModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'MeetingsModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'MissionsModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'NotesModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'NotificationsModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'OpportunitiesModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'RssReaderModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'SocialItemsModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'TasksModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'GroupsModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'RolesModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'UsersModule'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'MapsModule'
+		20526 Query	select get_user_actual_right(8, 'ConversationsModule', 'Access Conversations Tab')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'ConversationsModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Access Conversations Tab' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'DesignerModule', 'Access Designer Tool')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'DesignerModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Access Designer Tool' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'EmailMessagesModule', 'Access Emails Tab')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'EmailMessagesModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Access Emails Tab' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'ExportModule', 'Access Export Tool')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'ExportModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Access Export Tool' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'ImportModule', 'Access Import Tool')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'ImportModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Access Import Tool' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'JobsManagerModule', 'Access Jobs Manager Tab')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'JobsManagerModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Access Jobs Manager Tab' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'LeadsModule', 'Access Leads Tab')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'LeadsModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Access Leads Tab' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'MeetingsModule', 'Access Meetings')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'MeetingsModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Access Meetings' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'MissionsModule', 'Access Missions Tab')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'MissionsModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Access Missions Tab' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'NotesModule', 'Access Notes')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'NotesModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Access Notes' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'OpportunitiesModule', 'Access Opportunities Tab')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'OpportunitiesModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Access Opportunities Tab' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'SocialItemsModule', 'Access Social Items')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'SocialItemsModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Access Social Items' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'TasksModule', 'Access Tasks')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'TasksModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Access Tasks' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'GroupsModule', 'Access Groups Tab')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'GroupsModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Access Groups Tab' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'RolesModule', 'Access Roles Tab')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'RolesModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Access Roles Tab' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'UsersModule', 'Access Users Tab')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'UsersModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Access Users Tab' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'MapsModule', 'Access Maps Administration')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'MapsModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Access Maps Administration' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	SELECT * FROM `namedsecurableitem` WHERE name = 'ConversationsModule'
+		20526 Query	select get_securableitem_actual_permissions_for_permitable(0, 11, 'NamedSecurableItem', '', 1)
+		20526 Query	select named_group_contains_permitable('Super Administrators',  NAME_CONST('_permitable_id',11))
+                into is_super_administrator
+		20526 Query	select id
+                    into   group_id_1
+                    from   _group
+                    where  _group.name =  NAME_CONST('group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	select id
+                into   result
+                from   _user
+                where  _user.permitable_id =  NAME_CONST('_permitable_id',11)
+		20526 Query	call recursive_group_contains_user( NAME_CONST('group_id_1',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	select  NAME_CONST('_securableitem_id',0) in
+                            (select securableitem_id
+                             from   _user, ownedsecurableitem
+                             where  _user.id = ownedsecurableitem.owner__user_id and
+                                    permitable_id =  NAME_CONST('_permitable_id',11))
+                        into is_owner
+		20526 Query	call get_securableitem_cached_actual_permissions_for_permitable( NAME_CONST('_securableitem_id',0),  NAME_CONST('_permitable_id',11),  NAME_CONST('allow_permissions',0),  NAME_CONST('deny_permissions',0))
+		20526 Query	SELECT * FROM `_group__user` WHERE ( `_user_id`  IN ( '8')  )
+		20526 Query	SELECT * FROM `_group` WHERE name = 'Everyone'
+		20526 Query	SELECT * FROM `permitable` WHERE ( `id`  IN ( '5')  )
+		20526 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '35')  )
+		20526 Query	select count(distinct `conversation`.`id`) from (`conversation`, `ownedsecurableitem`) left join `conversationparticipant` on `conversationparticipant`.`conversation_id` = `conversation`.`id` left join `conversation_read` on `conversation_read`.`securableitem_id` = `ownedsecurableitem`.`securableitem_id` and `munge_id` in ('U8', 'G3') where ((((`conversation`.`ownerhasreadlatest` != 1) and (`ownedsecurableitem`.`owner__user_id` = 8)) or ((`conversationparticipant`.`person_item_id` = 223) and (`conversationparticipant`.`hasreadlatest` != 1)))) and (`ownedsecurableitem`.`owner__user_id` = 8 OR `conversation_read`.`munge_id` IS NOT NULL) and `ownedsecurableitem`.`id` = `conversation`.`ownedsecurableitem_id`
+		20526 Query	select id
+                    from ( select id, modelclassname, modelid, datetime from auditevent where _user_id = 8
+                    AND eventname = 'Item Viewed' order by id desc ) auditevent
+                    group by concat(modelclassname, modelid) order by datetime desc limit 10
+		20526 Query	SELECT * FROM `auditevent` WHERE ( `id`  IN ( '1450','1430')  )
+		20526 Query	select get_user_actual_right(8, 'ZurmoModule', 'Access Administration Tab')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'ZurmoModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Access Administration Tab' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'AccountsModule', 'Create Accounts')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'AccountsModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Create Accounts' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'ContactsModule', 'Create Contacts')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'ContactsModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Create Contacts' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'ConversationsModule', 'Create Conversations')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'ConversationsModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Create Conversations' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'LeadsModule', 'Create Leads')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'LeadsModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Create Leads' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'MissionsModule', 'Create Missions')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'MissionsModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Create Missions' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	select get_user_actual_right(8, 'OpportunitiesModule', 'Create Opportunities')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'OpportunitiesModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Create Opportunities' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+130322 22:11:56	20526 Query	select `gamenotification`.`id` id from `gamenotification` where (`gamenotification`.`_user_id` = 8) order by gamenotification.id asc
+		20526 Query	SELECT * FROM `perusermetadata` WHERE className = 'ZurmoModule' and _user_id = 8
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'ZurmoModule'
+		20526 Query	SELECT * FROM `perusermetadata` WHERE className = 'ZurmoModule' and _user_id = 8
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'ZurmoModule'
+		20526 Query	select `notification`.`id` id from `notification` where (`notification`.`owner__user_id` = 8)
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'ContactDetailsAndRelationsView'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'ContactEditAndDetailsView'
+		20526 Query	select get_user_actual_right(8, 'ContactsModule', 'Delete Contacts')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'ContactsModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Delete Contacts' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	SELECT * FROM `contactstate` WHERE ( `id`  IN ( '7')  )
+		20526 Query	SELECT * FROM `email` WHERE ( `id`  IN ( '389')  )
+		20526 Query	SELECT * FROM `email` WHERE ( `id`  IN ( '390')  )
+		20526 Query	SELECT * FROM `address` WHERE ( `id`  IN ( '617')  )
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'Address'
+		20526 Query	SELECT * FROM `address` WHERE ( `id`  IN ( '618')  )
+		20526 Query	select id from permission where securableitem_id = 409
+		20526 Query	SELECT * FROM `permission` WHERE ( `id`  IN ( '109')  )
+		20526 Query	SELECT * FROM `permitable` WHERE ( `id`  IN ( '5')  )
+		20526 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '35')  )
+		20526 Query	SELECT * FROM `_group` WHERE permitable_id = '5'
+		20526 Query	select id, `column`, position from portlet where layoutid = 'ContactDetailsAndRelationsViewLeftBottomView' and _user_id = 8 order by `column`, position
+		20526 Query	SELECT * FROM `portlet` WHERE id = '142'
+		20526 Query	SELECT * FROM `portlet` WHERE id = '143'
+		20526 Query	SELECT * FROM `activity_item` WHERE ( `activity_id`  IN ( '0')  )
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'NoteInlineEditView'
+		20526 Query	SHOW VARIABLES LIKE 'max_allowed_packet'
+		20526 Query	SELECT * FROM `securableitem` WHERE contact_id = '192'
+		20526 Query	SELECT * FROM `securableitem` WHERE contact_id = '192'
+		20526 Query	select `_group`.`id` id from `_group`
+		20526 Query	SELECT * FROM `_group` WHERE ( `id`  IN ( '3','1')  )
+		20526 Query	SELECT * FROM `permitable` WHERE ( `id`  IN ( '2')  )
+		20526 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '2')  )
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'ContactLatestActivtiesForPortletView'
+		20526 Query	select get_user_actual_right(8, 'EmailMessagesModule', 'Create Emails')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'EmailMessagesModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Create Emails' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'LatestActivitiesForContactListView'
+		20526 Query	select count(`conversation`.`id`) from `conversation` left join `conversation_item` on `conversation_item`.`conversation_id` = `conversation`.`id` where (`conversation_item`.`item_id` = 567)
+		20526 Query	select count(`meeting`.`id`) from (`meeting`, `activity`) left join `activity_item` on `activity_item`.`activity_id` = `activity`.`id` where (`activity_item`.`item_id` = 567) and (`meeting`.`startdatetime` < '2013-03-22 21:11:56') and `activity`.`id` = `meeting`.`activity_id`
+		20526 Query	select count(`note`.`id`) from (`note`, `activity`) left join `activity_item` on `activity_item`.`activity_id` = `activity`.`id` where (`activity_item`.`item_id` = 567) and `activity`.`id` = `note`.`activity_id`
+		20526 Query	select count(`task`.`id`) from (`task`, `activity`) left join `activity_item` on `activity_item`.`activity_id` = `activity`.`id` where (`activity_item`.`item_id` = 567) and (`task`.`completed` = 1) and `activity`.`id` = `task`.`activity_id`
+		20526 Query	SELECT * FROM `_group` WHERE name = 'Everyone'
+		20526 Query	SELECT * FROM `namedsecurableitem` WHERE name = 'MeetingsModule'
+		20526 Query	select get_securableitem_actual_permissions_for_permitable(0, 11, 'NamedSecurableItem', '', 1)
+		20526 Query	select named_group_contains_permitable('Super Administrators',  NAME_CONST('_permitable_id',11))
+                into is_super_administrator
+		20526 Query	select id
+                    into   group_id_1
+                    from   _group
+                    where  _group.name =  NAME_CONST('group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	select id
+                into   result
+                from   _user
+                where  _user.permitable_id =  NAME_CONST('_permitable_id',11)
+		20526 Query	call recursive_group_contains_user( NAME_CONST('group_id_1',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	select  NAME_CONST('_securableitem_id',0) in
+                            (select securableitem_id
+                             from   _user, ownedsecurableitem
+                             where  _user.id = ownedsecurableitem.owner__user_id and
+                                    permitable_id =  NAME_CONST('_permitable_id',11))
+                        into is_owner
+		20526 Query	call get_securableitem_cached_actual_permissions_for_permitable( NAME_CONST('_securableitem_id',0),  NAME_CONST('_permitable_id',11),  NAME_CONST('allow_permissions',0),  NAME_CONST('deny_permissions',0))
+		20526 Query	SELECT * FROM `_group` WHERE name = 'Everyone'
+		20526 Query	SELECT * FROM `namedsecurableitem` WHERE name = 'NotesModule'
+		20526 Query	select get_securableitem_actual_permissions_for_permitable(0, 11, 'NamedSecurableItem', '', 1)
+		20526 Query	select named_group_contains_permitable('Super Administrators',  NAME_CONST('_permitable_id',11))
+                into is_super_administrator
+		20526 Query	select id
+                    into   group_id_1
+                    from   _group
+                    where  _group.name =  NAME_CONST('group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	select id
+                into   result
+                from   _user
+                where  _user.permitable_id =  NAME_CONST('_permitable_id',11)
+		20526 Query	call recursive_group_contains_user( NAME_CONST('group_id_1',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	select  NAME_CONST('_securableitem_id',0) in
+                            (select securableitem_id
+                             from   _user, ownedsecurableitem
+                             where  _user.id = ownedsecurableitem.owner__user_id and
+                                    permitable_id =  NAME_CONST('_permitable_id',11))
+                        into is_owner
+		20526 Query	call get_securableitem_cached_actual_permissions_for_permitable( NAME_CONST('_securableitem_id',0),  NAME_CONST('_permitable_id',11),  NAME_CONST('allow_permissions',0),  NAME_CONST('deny_permissions',0))
+		20526 Query	SELECT * FROM `_group` WHERE name = 'Everyone'
+		20526 Query	SELECT * FROM `namedsecurableitem` WHERE name = 'TasksModule'
+		20526 Query	select get_securableitem_actual_permissions_for_permitable(0, 11, 'NamedSecurableItem', '', 1)
+		20526 Query	select named_group_contains_permitable('Super Administrators',  NAME_CONST('_permitable_id',11))
+                into is_super_administrator
+		20526 Query	select id
+                    into   group_id_1
+                    from   _group
+                    where  _group.name =  NAME_CONST('group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	select id
+                into   result
+                from   _user
+                where  _user.permitable_id =  NAME_CONST('_permitable_id',11)
+		20526 Query	call recursive_group_contains_user( NAME_CONST('group_id_1',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	select  NAME_CONST('_securableitem_id',0) in
+                            (select securableitem_id
+                             from   _user, ownedsecurableitem
+                             where  _user.id = ownedsecurableitem.owner__user_id and
+                                    permitable_id =  NAME_CONST('_permitable_id',11))
+                        into is_owner
+		20526 Query	call get_securableitem_cached_actual_permissions_for_permitable( NAME_CONST('_securableitem_id',0),  NAME_CONST('_permitable_id',11),  NAME_CONST('allow_permissions',0),  NAME_CONST('deny_permissions',0))
+		20526 Query	SELECT * FROM `_group` WHERE name = 'Everyone'
+		20526 Query	(select distinct `conversation`.`id` id, 'Conversation' modelClassName, `conversation`.`latestdatetime` orderByColumn from (`conversation`, `ownedsecurableitem`) left join `conversation_item` on `conversation_item`.`conversation_id` = `conversation`.`id` left join `conversation_read` on `conversation_read`.`securableitem_id` = `ownedsecurableitem`.`securableitem_id` and `munge_id` in ('U8', 'G3') where ((`conversation_item`.`item_id` = 567)) and (`ownedsecurableitem`.`owner__user_id` = 8 OR `conversation_read`.`munge_id` IS NOT NULL) and `ownedsecurableitem`.`id` = `conversation`.`ownedsecurableitem_id`) UNION (select distinct `meeting`.`id` id, 'Meeting' modelClassName, `activity`.`latestdatetime` orderByColumn from (`meeting`, `activity`, `ownedsecurableitem`) left join `activity_item` on `activity_item`.`activity_id` = `activity`.`id` left join `meeting_read` on `meeting_read`.`securableitem_id` = `ownedsecurableitem`.`securableitem_id` and `munge_id` in ('U8', 'G3') where ((`activity_item`.`item_id` = 567) and (`meeting`.`startdatetime` < '2013-03-22 21:11:56')) and (`ownedsecurableitem`.`owner__user_id` = 8 OR `meeting_read`.`munge_id` IS NOT NULL) and `activity`.`id` = `meeting`.`activity_id` and `ownedsecurableitem`.`id` = `activity`.`ownedsecurableitem_id`) UNION (select distinct `note`.`id` id, 'Note' modelClassName, `activity`.`latestdatetime` orderByColumn from (`note`, `activity`, `ownedsecurableitem`) left join `activity_item` on `activity_item`.`activity_id` = `activity`.`id` left join `note_read` on `note_read`.`securableitem_id` = `ownedsecurableitem`.`securableitem_id` and `munge_id` in ('U8', 'G3') where ((`activity_item`.`item_id` = 567)) and (`ownedsecurableitem`.`owner__user_id` = 8 OR `note_read`.`munge_id` IS NOT NULL) and `activity`.`id` = `note`.`activity_id` and `ownedsecurableitem`.`id` = `activity`.`ownedsecurableitem_id`) UNION (select distinct `task`.`id` id, 'Task' modelClassName, `activity`.`latestdatetime` orderByColumn from (`task`, `activity`, `ownedsecurableitem`) left join `activity_item` on `activity_item`.`activity_id` = `activity`.`id` left join `task_read` on `task_read`.`securableitem_id` = `ownedsecurableitem`.`securableitem_id` and `munge_id` in ('U8', 'G3') where ((`activity_item`.`item_id` = 567) and (`task`.`completed` = 1)) and (`ownedsecurableitem`.`owner__user_id` = 8 OR `task_read`.`munge_id` IS NOT NULL) and `activity`.`id` = `task`.`activity_id` and `ownedsecurableitem`.`id` = `activity`.`ownedsecurableitem_id`) order by orderByColumn desc limit 5 offset 0
+		20526 Query	select id, `column`, position from portlet where layoutid = 'ContactDetailsAndRelationsViewRightBottomView' and _user_id = 8 order by `column`, position
+		20526 Query	SELECT * FROM `portlet` WHERE id = '144'
+		20526 Query	SELECT * FROM `portlet` WHERE id = '145'
+		20526 Query	SELECT * FROM `portlet` WHERE id = '146'
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'UpcomingMeetingsForContactCalendarView'
+		20526 Query	SELECT * FROM `_group` WHERE name = 'Everyone'
+		20526 Query	select distinct `meeting`.`startdatetime` from (`meeting`, `activity`, `ownedsecurableitem`) left join `activity_item` on `activity_item`.`activity_id` = `activity`.`id` left join `meeting_read` on `meeting_read`.`securableitem_id` = `ownedsecurableitem`.`securableitem_id` and `munge_id` in ('U8', 'G3') where (((`meeting`.`startdatetime` > '2013-02-28 23:00:00') and (`meeting`.`startdatetime` < '2013-03-31 22:59:59') and (`activity_item`.`item_id` = 567))) and (`ownedsecurableitem`.`owner__user_id` = 8 OR `meeting_read`.`munge_id` IS NOT NULL) and `activity`.`id` = `meeting`.`activity_id` and `ownedsecurableitem`.`id` = `activity`.`ownedsecurableitem_id`
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'OpenTasksForContactRelatedListView'
+		20526 Query	SELECT * FROM `_group` WHERE name = 'Everyone'
+		20526 Query	select count(distinct `task`.`id`) from (`task`, `activity`, `ownedsecurableitem`) left join `activity_item` on `activity_item`.`activity_id` = `activity`.`id` left join `task_read` on `task_read`.`securableitem_id` = `ownedsecurableitem`.`securableitem_id` and `munge_id` in ('U8', 'G3') where (((`activity_item`.`item_id` = 567) and (`task`.`completed` != 1))) and (`ownedsecurableitem`.`owner__user_id` = 8 OR `task_read`.`munge_id` IS NOT NULL) and `activity`.`id` = `task`.`activity_id` and `ownedsecurableitem`.`id` = `activity`.`ownedsecurableitem_id`
+		20526 Query	select get_user_actual_right(8, 'TasksModule', 'Create Tasks')
+		20526 Query	select named_group_contains_user('Super Administrators',  NAME_CONST('_user_id',8))
+                into   is_super_administrator
+		20526 Query	select id
+                    into   _group_id
+                    from   _group
+                    where  _group.name =  NAME_CONST('_group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	call recursive_group_contains_user( NAME_CONST('_group_id',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	call recursive_get_user_actual_right( NAME_CONST('_user_id',8),  NAME_CONST('module_name',_utf8'TasksModule' COLLATE 'utf8_unicode_ci'),  NAME_CONST('right_name',_utf8'Create Tasks' COLLATE 'utf8_unicode_ci'),  NAME_CONST('result',NULL))
+		20526 Query	SELECT * FROM `globalmetadata` WHERE className = 'OpportunitiesForContactRelatedListView'
+		20526 Query	SELECT * FROM `namedsecurableitem` WHERE name = 'OpportunitiesModule'
+		20526 Query	select get_securableitem_actual_permissions_for_permitable(0, 11, 'NamedSecurableItem', '', 1)
+		20526 Query	select named_group_contains_permitable('Super Administrators',  NAME_CONST('_permitable_id',11))
+                into is_super_administrator
+		20526 Query	select id
+                    into   group_id_1
+                    from   _group
+                    where  _group.name =  NAME_CONST('group_name',_utf8'Super Administrators' COLLATE 'utf8_unicode_ci')
+		20526 Query	select id
+                into   result
+                from   _user
+                where  _user.permitable_id =  NAME_CONST('_permitable_id',11)
+		20526 Query	call recursive_group_contains_user( NAME_CONST('group_id_1',1),  NAME_CONST('_user_id',8),  NAME_CONST('result',0))
+		20526 Query	select  NAME_CONST('_securableitem_id',0) in
+                            (select securableitem_id
+                             from   _user, ownedsecurableitem
+                             where  _user.id = ownedsecurableitem.owner__user_id and
+                                    permitable_id =  NAME_CONST('_permitable_id',11))
+                        into is_owner
+		20526 Query	call get_securableitem_cached_actual_permissions_for_permitable( NAME_CONST('_securableitem_id',0),  NAME_CONST('_permitable_id',11),  NAME_CONST('allow_permissions',0),  NAME_CONST('deny_permissions',0))
+		20526 Query	SELECT * FROM `_group` WHERE name = 'Everyone'
+		20526 Query	select count(distinct `opportunity`.`id`) from (`opportunity`, `ownedsecurableitem`) left join `contact_opportunity` on `contact_opportunity`.`opportunity_id` = `opportunity`.`id` left join `opportunity_read` on `opportunity_read`.`securableitem_id` = `ownedsecurableitem`.`securableitem_id` and `munge_id` in ('U8', 'G3') where ((`contact_opportunity`.`contact_id` = 192)) and (`ownedsecurableitem`.`owner__user_id` = 8 OR `opportunity_read`.`munge_id` IS NOT NULL) and `ownedsecurableitem`.`id` = `opportunity`.`ownedsecurableitem_id`
+		20526 Query	select `gamebadge`.`id` id from `gamebadge` where (`gamebadge`.`person_item_id` = 223)
+		20526 Query	SELECT * FROM `gamebadge` WHERE ( `id`  IN ( '31','40','41','42')  )
+		20526 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '226')  )
+		20526 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '566')  )
+		20526 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '570')  )
+		20526 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '575')  )
+		20526 Query	select `gamepoint`.`id` id from `gamepoint` where (`gamepoint`.`person_item_id` = 223)
+		20526 Query	SELECT * FROM `gamepoint` WHERE ( `id`  IN ( '22','26','27')  )
+		20526 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '225')  )
+		20526 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '569')  )
+		20526 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '574')  )
+		20526 Query	select `gamescore`.`id` id from `gamescore` where (`gamescore`.`person_item_id` = 223)
+		20526 Query	SELECT * FROM `gamescore` WHERE ( `id`  IN ( '41','53','54','55','56')  )
+		20526 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '224')  )
+		20526 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '565')  )
+		20526 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '568')  )
+		20526 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '573')  )
+		20526 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '578')  )
+		20526 Query	select type, sum(value) sum from gamepoint where person_item_id = 223 group by type
+		20526 Query	select `gamelevel`.`id` id from `gamelevel` where (`gamelevel`.`person_item_id` = 223)
+		20526 Query	SELECT * FROM `gamelevel` WHERE ( `id`  IN ( '15','16')  )
+		20526 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '571')  )
+		20526 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '579')  )
+		20526 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '223')  )
+		20526 Query	UPDATE `item` SET  `createddatetime` = '2013-03-22 21:07:13' , `modifieddatetime` = '2013-03-22 21:11:56' , `customfieldsmodel_id` = NULL , `createdbyuser__user_id` = '8' , `modifiedbyuser__user_id` = '8'  WHERE id = 571
+		20527 Connect	zurmo@localhost on inuits_zurmo
+		20527 Query	SET NAMES 'utf8'
+		20528 Connect	zurmo@localhost on inuits_zurmo
+		20528 Query	SET NAMES utf8
+		20528 Query	SELECT * FROM `globalmetadata` WHERE className = 'ZurmoModule'
+130322 22:11:57	20526 Query	UPDATE `gamelevel` SET  `item_id` = '571' , `person_item_id` = '223' , `type` = 'General' , `value` = 2  WHERE id = 15
+		20526 Query	insert into auditevent (datetime,
+                                                modulename,
+                                                eventname,
+                                                _user_id,
+                                                modelclassname,
+                                                modelid,
+                                                serializeddata)
+                        values ('2013-03-22 21:11:57',
+                                'ZurmoModule',
+                                'Item Modified',
+                                8, 'GameLevel', 15, 'a:4:{i:0;s:7:\"General\";i:1;a:1:{i:0;s:5:\"value\";}i:2;s:1:\"1\";i:3;i:2;}')
+		20526 Query	select id from _user where username = 'krisbuytaert'
+		20526 Query	select id from _user where username = 'krisbuytaert'
+		20526 Query	INSERT INTO `gamenotification` ( id, `serializeddata`,`_user_id` ) VALUES
+      ( NULL,  'a:2:{s:4:\"type\";s:11:\"LevelChange\";s:10:\"levelValue\";i:2;}' , '8'  )
+130322 22:11:58	20528 Query	SELECT * FROM `_user` WHERE username = 'krisbuytaert'
+		20528 Query	SELECT * FROM `globalmetadata` WHERE className = 'User'
+		20528 Query	SELECT * FROM `globalmetadata` WHERE className = 'Person'
+		20528 Query	SELECT * FROM `permitable` WHERE ( `id`  IN ( '11')  )
+		20528 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '223')  )
+		20528 Query	SELECT * FROM `person` WHERE ( `id`  IN ( '24')  )
+		20528 Query	SELECT * FROM `customfield` WHERE ( `id`  IN ( '91')  )
+		20525 Quit	
+		20528 Query	SELECT * FROM `basecustomfield` WHERE ( `id`  IN ( '91')  )
+		20528 Query	SELECT * FROM `customfielddata` WHERE name = 'Titles'
+		20528 Query	SELECT * FROM `customfielddata` WHERE ( `id`  IN ( '7')  )
+		20526 Quit	
+		20528 Query	SELECT * FROM `perusermetadata` WHERE className = 'UsersModule' and _user_id = 8
+		20528 Query	SELECT * FROM `globalmetadata` WHERE className = 'UsersModule'
+		20528 Query	SELECT * FROM `globalmetadata` WHERE className = 'Account'
+		20528 Query	SELECT * FROM `customfielddata` WHERE name = 'Industries'
+		20528 Query	SELECT * FROM `customfielddata` WHERE name = 'AccountTypes'
+		20528 Query	SELECT * FROM `globalmetadata` WHERE className = 'Contact'
+		20528 Query	SELECT * FROM `customfielddata` WHERE name = 'LeadSources'
+		20528 Query	SELECT * FROM `globalmetadata` WHERE className = 'Opportunity'
+		20528 Query	SELECT * FROM `customfielddata` WHERE name = 'SalesStages'
+		20528 Query	SELECT * FROM `globalmetadata` WHERE className = 'Conversation'
+		20528 Query	SELECT * FROM `globalmetadata` WHERE className = 'Meeting'
+		20528 Query	SELECT * FROM `customfielddata` WHERE name = 'MeetingCategories'
+		20528 Query	SELECT * FROM `globalmetadata` WHERE className = 'Mission'
+		20528 Query	SELECT * FROM `globalmetadata` WHERE className = 'Note'
+		20528 Query	SELECT * FROM `globalmetadata` WHERE className = 'Task'
+		20528 Query	SELECT * FROM `globalmetadata` WHERE className = 'Currency'
+		20528 Query	select `gamebadge`.`id` id from `gamebadge` where (`gamebadge`.`person_item_id` = 223)
+		20528 Query	SELECT * FROM `gamebadge` WHERE ( `id`  IN ( '31','40','41','42')  )
+		20528 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '226')  )
+		20528 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '566')  )
+		20528 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '570')  )
+		20528 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '575')  )
+		20528 Query	select `gamepoint`.`id` id from `gamepoint` where (`gamepoint`.`person_item_id` = 223)
+		20528 Query	SELECT * FROM `gamepoint` WHERE ( `id`  IN ( '22','26','27')  )
+		20528 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '225')  )
+		20528 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '569')  )
+		20528 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '574')  )
+		20528 Query	select `gamescore`.`id` id from `gamescore` where (`gamescore`.`person_item_id` = 223)
+		20528 Query	SELECT * FROM `gamescore` WHERE ( `id`  IN ( '41','53','54','55','56')  )
+		20528 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '224')  )
+		20528 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '565')  )
+		20528 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '568')  )
+		20528 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '573')  )
+		20528 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '578')  )
+		20528 Query	select type, sum(value) sum from gamepoint where person_item_id = 223 group by type
+		20528 Query	select `gamelevel`.`id` id from `gamelevel` where (`gamelevel`.`person_item_id` = 223)
+		20528 Query	SELECT * FROM `gamelevel` WHERE ( `id`  IN ( '15','16')  )
+		20528 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '571')  )
+		20528 Query	SELECT * FROM `item` WHERE ( `id`  IN ( '579')  )
+		20527 Quit	
+		20528 Quit	
+130322 22:12:01	20353 Query	set global  general_log = 'off'
